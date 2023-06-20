@@ -40,7 +40,7 @@ public class TestController {
         String filePath = "path/to/QuestionsFiles/"; // Replace with the actual file path
         List<Question> questions;
         try {
-            questions = questionReader.readQuestionsFromDirectory(filePath);
+            questions = questionReader.readQuestionsFromDirectory();
         } catch (IOException e) {
             // Handle the exception appropriately
             return Collections.emptyList(); // Return an empty list in case of an error
