@@ -1,0 +1,11 @@
+Adaptability_B
+To what degree does a disorderly or unorganized work environment affect your performance?|2|-
+To what degree can you perform work tasks in an environment that is not clean?|2|+
+To what extent do you become frustrated when things are unpredictable at work?|2|-
+To what extent can you readily change gears when something unexpected happens at work?|2|+
+To what extent are you flexible when dealing with your work colleagues?|2|+
+To what degree do you physically push yourself to complete important work tasks?|2|+
+To what degree can you work effectively even when you are tired?|2|+
+To what degree can you adjust your plans to changing work conditions?|2|+
+To what degree can you keep working even when you are physically exhausted?|2|+
+EOF

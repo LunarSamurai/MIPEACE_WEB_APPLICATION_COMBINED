@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7c1c8d7a.css",
+    "main.js": "/static/js/main.1efaa11b.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo-big.png": "/static/media/logo-big.57e4e55c5fcd28f358a8.png",
+    "static/media/brain-illustration-12-svgrepo-com.svg": "/static/media/brain-illustration-12-svgrepo-com.9cf26758bd161d2c4fa1f8d842951d65.svg",
+    "index.html": "/index.html",
+    "main.7c1c8d7a.css.map": "/static/css/main.7c1c8d7a.css.map",
+    "main.1efaa11b.js.map": "/static/js/main.1efaa11b.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c1c8d7a.css",
+    "static/js/main.1efaa11b.js"
+  ]
+}
