@@ -1,6 +1,7 @@
 package com.example.mipeacebackendspringboot;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -15,8 +16,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(path = "/test")
@@ -30,29 +33,34 @@ public class TestController {
         this.testResponseRepository = testResponseRepository;
     }
 
-    @Autowired
-    private QuestionReader questionReader;
-
-    @GetMapping(path = "/questions")
-    public @ResponseBody
-    List<Question> getTestQuestions() {
-        // Retrieve the relevant questions based on the provided cacID
-        String filePath = "path/to/QuestionsFiles/"; // Replace with the actual file path
-        List<Question> questions;
+    @GetMapping("/questions")
+    public ResponseEntity<List<String>> getQuestionsFiles() {
         try {
-            questions = questionReader.readQuestionsFromDirectory();
-        } catch (IOException e) {
-            // Handle the exception appropriately
-            return Collections.emptyList(); // Return an empty list in case of an error
-        }
-        return questions;
-    }
+            Resource resource = new ClassPathResource("QuestionsFiles");
+            File folder = resource.getFile();
+            File[] files = folder.listFiles();
 
+            if (files != null) {
+                List<String> fileNames = Arrays.stream(files)
+                        .map(File::getName)
+                        .collect(Collectors.toList());
+                System.out.println("Successful Questions Files Pull");
+                return ResponseEntity.ok(fileNames);
+            } else {
+                System.out.println("Test Pull Unsuccessful");
+                return ResponseEntity.notFound().build();
+            }
+        } catch (IOException e) {
+            System.out.println("Error accessing QuestionsFiles directory: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+    
     @GetMapping("/files/{filename}")
     public ResponseEntity<Resource> downloadFile(@PathVariable String filename) {
         try {
             // Construct the file path
-            String filePath = "path/to/QuestionsFiles/" + filename;
+            String filePath = "/QuestionsFiles/" + filename;
             File file = new File(filePath);
 
             // Check if the file exists

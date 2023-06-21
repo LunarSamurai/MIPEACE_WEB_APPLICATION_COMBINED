@@ -1,0 +1,7 @@
+When you have experienced setbacks, difficulties, or failures at work or school, how often have you chalked it up to plain bad luck?|1|-
+How often have you had success in influencing how other people behave at work or school?|1|+
+When you encounter a situation at work or school that you are unhappy with, how often do you conclude there is little one can do about it?|1|-
+When falling short of goals at work or school, how often have you realized that, despite your best efforts, some outcomes seem to happen as if fate planned it that way?|1|-
+How often have you achieved goals at work or school that were a direct result of your hard work and not due to luck?|1|+
+How often have you observed at work or school that some people seem destined to fail while others seem destined for success no matter what they do?|1|-
+EOF
