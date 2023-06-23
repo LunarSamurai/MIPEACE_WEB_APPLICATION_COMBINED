@@ -1,4 +1,5 @@
 package com.example.mipeacebackendspringboot;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,17 +12,20 @@ import jakarta.persistence.Table;
 
 public class User {
   @Id
-  @GeneratedValue(strategy=GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  
+
   @Column(name = "firstName")
   private String firstName;
+
   @Column(name = "middleName")
   private String middleName;
+
   @Column(name = "lastName")
   private String lastName;
+
   @Column(name = "cacid")
-  private String cacID;
+  private String cacid;
 
   public Long getId() {
     return id;
@@ -47,7 +51,7 @@ public class User {
     this.middleName = middleName;
   }
 
-    public String getLastName() {
+  public String getLastName() {
     return lastName;
   }
 
@@ -56,10 +60,10 @@ public class User {
   }
 
   public String getCACID() {
-    return cacID;
+    return cacid;
   }
 
-  public void setCACID(String cacID) {
-    this.cacID = cacID;
+  public void setCACID(String cacid) {
+    this.cacid = cacid;
   }
 }
