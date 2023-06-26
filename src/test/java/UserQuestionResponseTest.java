@@ -69,7 +69,7 @@ class UserQuestionResponseTest {
     void testSubmitTestResponses() {
         // Mock the userRepository.findByCacID() method
         User user = new User();
-        when(userRepository.findByCacID(anyString())).thenReturn(user);
+        when(userRepository.findByCacid(anyString())).thenReturn(user);
 
         // Mock the testResponseRepository.save() method
         when(testResponseRepository.save(any(TestResponse.class))).thenReturn(new TestResponse());
@@ -100,7 +100,7 @@ class UserQuestionResponseTest {
         testController.submitTestResponses(cacID, responses);
 
         // Verify that userRepository.findByCacID() was called with the correct parameter
-        verify(userRepository).findByCacID(cacID);
+        verify(userRepository).findByCacid(cacID);
 
         // Verify that testResponseRepository.save() was called for each response
         verify(testResponseRepository, times(responses.size())).save(any(TestResponse.class));

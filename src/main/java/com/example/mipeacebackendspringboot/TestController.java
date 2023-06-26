@@ -101,9 +101,9 @@ public class TestController {
 
     @PostMapping(path = "/submit")
     public @ResponseBody
-    String submitTestResponses(@RequestParam String cacID, @RequestBody List<TestResponse> responses) {
+    String submitTestResponses(@RequestParam String cacid, @RequestBody List<TestResponse> responses) {
         // Find the user based on cacID
-        User user = userRepository.findByCacID(cacID);
+        User user = userRepository.findByCacid(cacid);
         if (user == null) {
             return "User not found";
         }

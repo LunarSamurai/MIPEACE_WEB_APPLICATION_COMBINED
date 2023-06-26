@@ -15,9 +15,4 @@ public class RegistrationService {
         userRepository.save(newUser);
     }
 
-    private boolean isAdminUser(User user) {
-        User adminUser = userRepository.findByCacID("0000000001");
-        return adminUser != null && adminUser.getCACID().equals(user.getCACID());
-    }
-
 }
