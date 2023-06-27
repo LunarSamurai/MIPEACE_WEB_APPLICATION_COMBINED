@@ -1,4 +1,3 @@
-Adaptability_B
 To what degree does a disorderly or unorganized work environment affect your performance?|2|-
 To what degree can you perform work tasks in an environment that is not clean?|2|+
 To what extent do you become frustrated when things are unpredictable at work?|2|-
