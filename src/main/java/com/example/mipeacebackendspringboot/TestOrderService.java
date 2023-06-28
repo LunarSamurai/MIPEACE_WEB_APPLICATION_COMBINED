@@ -14,6 +14,10 @@ public class TestOrderService {
         this.testOrderRepository = testOrderRepository;
     }
 
+    public List<TestOrder> getAllTestOrders() {
+        return testOrderRepository.findAll();
+    }
+
     public void saveTestOrder(TestOrderDto testOrderDto) {
         
         int testOrderNumber = testOrderDto.getTestOrderNumber();
