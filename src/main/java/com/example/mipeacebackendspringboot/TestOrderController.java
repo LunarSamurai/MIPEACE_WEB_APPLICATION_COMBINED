@@ -1,5 +1,9 @@
 package com.example.mipeacebackendspringboot;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -7,6 +11,8 @@ import java.util.stream.Collectors;
 import org.springframework.http.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -33,6 +39,7 @@ public class TestOrderController {
 
     @GetMapping("/get-test-order")
     public ResponseEntity<List<TestOrderDto>> getTestOrders() {
+        System.out.println("/api/get-test-order was found and used!");
         List<TestOrder> testOrders = testOrderService.getAllTestOrders();
         List<TestOrderDto> testOrderDtos = testOrders.stream()
                 .map(this::convertToDto)
@@ -40,16 +47,27 @@ public class TestOrderController {
         return ResponseEntity.ok(testOrderDtos);
     }
     
-    @GetMapping(value = "/get-test-file", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping("/get-test-file")
     public ResponseEntity<String> getTestFile(@RequestParam("fileName") String fileName) throws IOException {
-        Resource resource = new ClassPathResource("QuestionFiles/" + fileName);
+        System.out.println("The /get-test-file mapping was found!");
+        String filePath = "QuestionsFiles/" + fileName;
+        System.out.println(filePath);
+        System.out.println(fileName);
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filePath);
 
-        if (resource.exists()) {
-            Path filePath = resource.getFile().toPath();
-            String fileContent = new String(Files.readAllBytes(filePath));
-            return ResponseEntity.ok(fileContent);
+        if (inputStream != null) {
+            String fileContents = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            inputStream.close();
+            System.out.println("File Contents were read: " + fileContents);
+            return ResponseEntity
+                    .ok()
+                    .contentType(MediaType.TEXT_PLAIN)
+                    .body(fileContents);
         } else {
-            return ResponseEntity.notFound().build();
+            System.out.println("Your code is not working");
+            return ResponseEntity
+                    .status(HttpStatus.NOT_FOUND)
+                    .body(null);
         }
     }
 
