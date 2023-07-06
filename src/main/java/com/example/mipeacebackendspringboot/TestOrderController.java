@@ -91,6 +91,12 @@ public class TestOrderController {
         testOrderService.deleteAllTestOrders();
         return ResponseEntity.ok("All test orders deleted successfully");
     }
+
+    @PostMapping("/save-user-responses")
+    public ResponseEntity<String> saveUserResponses(@RequestBody List<UserResponseDto> userResponses) {
+        testOrderService.saveUserResponses(userResponses);
+        return ResponseEntity.ok("User responses saved successfully");
+    }
 }
 
 

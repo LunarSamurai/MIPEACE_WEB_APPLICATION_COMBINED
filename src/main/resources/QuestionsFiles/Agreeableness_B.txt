@@ -1,6 +1,6 @@
-To what extent are you interested in your squad members' ideas?|2|+
-To what extent do you sympathize with your squad members' feelings?|2|+
-To what extent do you take time out for your squad members?|2|+ 
-To what extent do you make your squad members feel at ease?|2|+ 
-To what extent are you concerned for your squad members?|2|+
+To what extent are you interested in your squad members' ideas?|2/+
+To what extent do you sympathize with your squad members' feelings?|2/+
+To what extent do you take time out for your squad members?|2/+ 
+To what extent do you make your squad members feel at ease?|2/+ 
+To what extent are you concerned for your squad members?|2/+
 EOF
