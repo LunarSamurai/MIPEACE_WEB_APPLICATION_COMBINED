@@ -1,6 +1,0 @@
-How disappointed would you be if you couldn't stay in the Army for at least 20 years?|2|+
-To what extent do you expect to be promoted to senior NCO ranks faster than your peers?|2|+
-How upset would you be if you didn't command a battalion as a Command Sergeant Major during your Army career?|2|+
-How disappointed will you be if your performance in your first command is less than outstanding?|2|+
-How likely is it that you will become one of the Army's best junior NCOs?|2|+
-EOF

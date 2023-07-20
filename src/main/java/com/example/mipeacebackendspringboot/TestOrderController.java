@@ -75,7 +75,7 @@ public class TestOrderController {
 
     @GetMapping("/get-file-names")
     public ResponseEntity<List<String>> getFileNames() throws IOException {
-        String directoryPath = "QuestionsFiles";
+        String directoryPath = "QuestionsFiles/";
         Resource resource = new ClassPathResource(directoryPath);
         File directory = resource.getFile();
         List<String> fileNames = Files.walk(directory.toPath())
@@ -88,7 +88,7 @@ public class TestOrderController {
 
     @PostMapping("/upload-file")
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
-        String uploadDirectory = "QuestionsFiles"; // Specify the directory to upload the file
+        String uploadDirectory = "src/main/resources/QuestionsFiles/"; // Specify the directory to upload the file
         String fileName = file.getOriginalFilename();
         System.out.println(fileName);
         try {
