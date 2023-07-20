@@ -14,8 +14,8 @@ public class UserResponseDto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "cacid")
-    private int cacid;
+    @Column(name = "cacID")
+    private String cacID;
 
     @Column(name = "text_file_name")
     private String textFileName;
@@ -27,7 +27,10 @@ public class UserResponseDto {
     private String positiveOrNegative;
 
     @Column(name = "answer")
-    private String answer;    
+    private String answer; 
+    
+    @Column (name= "response_id")
+    private String response_id;
 
     public Long getId() {
         return id;
@@ -35,12 +38,12 @@ public class UserResponseDto {
     public UserResponseDto() {
     }
 
-    public int getcacid(){
-        return cacid;
+    public String getCacID() {
+        return cacID;
     }
-    
-    public void setcacid(int cacid){
-        this.cacid = cacid;
+
+    public void setCacID(String cacID) {
+        this.cacID = cacID;
     }
     
     public String getTextFileName(){
@@ -73,6 +76,14 @@ public class UserResponseDto {
 
     public void setAnswer(String answer){
         this.answer = answer;
+    }
+
+    public String getResponseID(){
+        return response_id;
+    }
+
+    public void setResponseID(String response_id){
+        this.response_id = response_id;
     }
     
 }

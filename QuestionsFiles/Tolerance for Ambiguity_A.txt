@@ -1,0 +1,6 @@
+To what extent does it bother you when you do not have all the facts needed to accomplish an assigned work task?|2|-
+How often have you deferred a decision at work until you could get all the facts?|1|-
+How difficult has it been for you to take action at work before you really understood the situation?|2|-
+How comfortable are you making decisions at work based on little information?|2|+
+How often have you found yourself asking for more specific instructions when given an assigned work task?|1|-
+EOF

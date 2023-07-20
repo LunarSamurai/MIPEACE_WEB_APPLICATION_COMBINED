@@ -1,0 +1,23 @@
+Qualify with the M4|1|+
+Zero the M4 (071-COM-0031) |1|+
+Engage targets with the M4  (071-COM-0030) |1|+
+Qualify with M240B Machine Gun |1|+
+Engage targets with M240B Machine Gun |1|+
+Qualify with M249 (SAW)|1|+
+Engage targets with M249 (SAW) |1|+
+Qualify with the M17 |1|+
+Engage targets with M320 (Grenade Launcher) |1|+
+Qualify with M320 (Grenade Launcher) |1|+
+Employ a M67 (Fragmentation Grenade) (071-COM-4407) |1|+
+Identify topographic symbols on a military map (071-COM-1000) |1|+
+Identify terrain features on a military map (071-COM-1001) |1|+
+Navigate from One Point on the Ground to another Point while Dismounted (Day)  (071-COM-1006) |1|+
+Navigate from One Point on the Ground to another Point while Dismounted (Night)  (071-COM-1006) |1|+
+Determine the grid coordinates of a point on a military map (71-COM-1002) |1|+
+Protect myself from chemical and biological (CB) contamination using my protective mask (031-COM-1004) |1|+
+Move as a member of a fire team  (071-COM-0501) |1|+
+Move under direct fire (071-COM-0502) |1|+
+Move over, through, or around obstacles (except minefields) (0710COM-0503) |1|+
+Move as a member of a squad  (071-COM-0501) |1|+
+Camouflage myself and my equipment (052-COM-1361) |1|+
+EOF

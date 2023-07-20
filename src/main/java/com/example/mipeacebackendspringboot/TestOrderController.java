@@ -22,8 +22,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.core.io.Resource;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 
 
 @RestController
@@ -68,6 +70,42 @@ public class TestOrderController {
             return ResponseEntity
                     .status(HttpStatus.NOT_FOUND)
                     .body(null);
+        }
+    }
+
+    @GetMapping("/get-file-names")
+    public ResponseEntity<List<String>> getFileNames() throws IOException {
+        String directoryPath = "QuestionsFiles";
+        Resource resource = new ClassPathResource(directoryPath);
+        File directory = resource.getFile();
+        List<String> fileNames = Files.walk(directory.toPath())
+                .filter(Files::isRegularFile)
+                .map(Path::getFileName)
+                .map(Path::toString)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(fileNames);
+    }
+
+    @PostMapping("/upload-file")
+    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
+        String uploadDirectory = "QuestionsFiles"; // Specify the directory to upload the file
+        String fileName = file.getOriginalFilename();
+        System.out.println(fileName);
+        try {
+            // Create the directory if it does not exist
+            File directory = new File(uploadDirectory);
+            if (!directory.exists()) {
+                directory.mkdirs();
+            }
+
+            // Copy the file to the upload directory
+            Files.copy(file.getInputStream(), Path.of(uploadDirectory, fileName), StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("Will be attempting upload...");
+            return ResponseEntity.ok("File uploaded successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Looks like it isnt working...");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to upload the file");
         }
     }
 

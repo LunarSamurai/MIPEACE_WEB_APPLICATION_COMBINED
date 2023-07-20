@@ -1,0 +1,11 @@
+I plan ahead and organize things, to avoid scrambling at the last minute.|3|+
+I often push myself very hard when trying to achieve a goal.|3|+
+When working on something, I don’t pay much attention to small details.|3|-
+I make decisions based on the feeling of the moment rather than on careful thought|3|-
+When working, I sometimes have difficulties due to being disorganized|3|-
+I do only the minimum amount of work needed to get by.|3|-
+I always try to be accurate in my work, even at the expense of time|3|+
+I make a lot of mistakes because I don’t think before I act.|3|-
+People often call me a perfectionist|3|+
+I prefer to do whatever comes to mind, rather than stick to a plan.|3|-
+EOF
