@@ -1,0 +1,10 @@
+How often have you felt tempted to tell people off during OSUT?|1|-
+How often have you felt like doing things other than your job?|1|-
+How often have you shot your mouth off to people during OSUT?|1|-
+How often have you said things to people at work that you shouldn’t have said?|1|-
+How often have you acted at work without thinking about the consequences?|1|-
+To what extent do you keep yourself under control during OSUT?|2|+
+How often have you done things during OSUT that you regret later?|1|-
+How often do you interrupt people during OSUT?|1|-
+How often do you get overexcited during OSUT?|1|-
+EOF

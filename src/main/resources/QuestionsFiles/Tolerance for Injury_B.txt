@@ -1,0 +1,6 @@
+How often have you avoided situations where the risk of injury was too high?|1|-
+How often have you participated in sports or activities where there is a risk of physical injury?|1|+
+To what extent have you been attracted to activities associated with some degree of physical risk?|2|+
+To what extent have you felt that being in a war zone would give you a great opportunity to test yourself?|2|+
+One big attraction of serving in the Army is the chance to perform in hazardous situations.|2|-
+EOF

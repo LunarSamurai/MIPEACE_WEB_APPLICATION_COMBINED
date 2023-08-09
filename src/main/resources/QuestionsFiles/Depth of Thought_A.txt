@@ -1,0 +1,9 @@
+To what extent do you enjoy solving challenging problems at work?|2|+
+To what extent do you seek explanations for difficult problems at work?|2|+
+To what extent are you dissatisfied until you find solutions to problems at work?|2|+
+To what extent do you look at both sides of an issue before making a decision at work?|2|+
+To what extent do you have to make last-minute decisions at work?|2|-
+To what extent do you probe deeply into work-related issues?|2|+
+To what extent do you like to think thoroughly about work-related problems before making decisions?|2|+
+To what extent do you look for a deeper meaning in work-related issues?|2|-
+EOF

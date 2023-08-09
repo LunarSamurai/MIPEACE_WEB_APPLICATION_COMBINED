@@ -130,6 +130,37 @@ public class TestOrderController {
         return ResponseEntity.ok("All test orders deleted successfully");
     }
 
+    @DeleteMapping("/remove-files")
+    public ResponseEntity<String> removeFiles(@RequestBody List<String> filesToRemove) {
+        String uploadDirectory = "src/main/resources/QuestionsFiles/";
+        System.out.println("Removing files: " + filesToRemove); // Debug: Print the list of files to be removed
+        
+        try {
+            for (String fileName : filesToRemove) {
+                System.out.println("Removing file: " + fileName); // Debug: Print the file being removed
+                Path filePath = Path.of(uploadDirectory, fileName);
+                File file = filePath.toFile();
+                
+                if (file.exists()) {
+                    boolean deleted = file.delete();
+                    if (deleted) {
+                        System.out.println("File removed: " + fileName);
+                    } else {
+                        System.out.println("Failed to remove file: " + fileName);
+                    }
+                } else {
+                    System.out.println("File not found: " + fileName);
+                }
+            }
+            return ResponseEntity.ok("Files removed successfully");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to remove files");
+        }
+    }
+    
+    
+
     @PostMapping("/save-user-responses")
     public ResponseEntity<String> saveUserResponses(@RequestBody List<UserResponseDto> userResponses) {
         testOrderService.saveUserResponses(userResponses);

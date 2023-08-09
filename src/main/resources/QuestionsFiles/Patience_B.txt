@@ -1,0 +1,10 @@
+My friends would say I’m a very patient friend.|5|+
+I am able to wait-out tough times.|5|+
+Although they are annoying, I don’t get too upset in traffic jams.|5|+
+I am patient with other people.|5|+
+In general waiting in lines does not bother me.|5|+
+I have trouble being patient with my close friends and family.|5|-
+When someone is having difficulty learning something new, I will be able to help them without getting frustrated or annoyed.|5|+
+I get very annoyed at red lights.|5|-
+I find it easy to be patient with people.|5|+
+EOF

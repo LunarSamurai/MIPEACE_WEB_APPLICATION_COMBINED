@@ -1,0 +1,8 @@
+I have a rich vocabulary.|3|+
+I have a vivid imagination.|3|+
+I have excellent ideas.|3|+ 
+I am quick to understand abstract ideas.|3|+ 
+I spend time reflecting on things.|3|+
+I am full of ideas.|3|+  
+I use difficult words.|3|+
+EOF

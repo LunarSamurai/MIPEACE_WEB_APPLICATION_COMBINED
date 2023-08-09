@@ -1,0 +1,9 @@
+To what extent do you mind doing things at work even if they involve extra effort?|2|+
+To what extent are you a "workaholic?"|2|+
+To what extent do you feel excited just before you are about to reach a goal at work?|2|+
+To what extent do you enjoy actively doing things at work, more than just watching and observing?|2|+
+To what extent when you decide to do something at work you can't wait to get started?|2|+
+To what extent when you accomplish one work task you already have the next one in mind?|2|+
+To what extent are your thoughts at work occupied with the work task you wish to accomplish?|2|+
+To what extent when you start something at work you persevere until you finish it?|2|+
+EOF

@@ -1,0 +1,8 @@
+How often have you been asked to be the team spokesperson on group projects?|1|+
+How often have others asked you to settle differences of opinion on group projects?|1|+
+In group situations, how often have other group members come to you for help?|1|+
+How often have you been the one asked to organize group projects in school or at work?|1|+
+How comfortable are you with setting the standard for others to follow?|2|+
+To what extent do you enjoy teaching others when they seek you out for help?|2|+
+How willing are you to accept the responsibility for your group’s performance?|2|+
+EOF

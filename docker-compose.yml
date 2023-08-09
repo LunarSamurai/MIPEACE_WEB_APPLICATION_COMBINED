@@ -1,10 +1,31 @@
-version: '3.4'
+version: '3.8'
 
 services:
-  mipeacebackendspringboot:
-    image: mipeacebackendspringboot
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+  backend:
+    image: mipeacebackendspringboot:latest # Replace with the image name for your backend application
     ports:
-      - 3000:3000
+      - "8080:8080" # Adjust the port mapping as needed
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/mipeace_db
+      SPRING_DATASOURCE_USERNAME: labuser
+      SPRING_DATASOURCE_PASSWORD: 123!@#ARIira18()
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_MVC_STATIC_PATH_PATTERN: /**
+      SPRING_RESOURCES_STATIC_LOCATIONS: classpath:/static/
+    depends_on:
+      - mysql_db
+
+  mysql_db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 123!@#ARIira18 # Replace with your actual MySQL root password
+      MYSQL_DATABASE: mipeace_db
+      MYSQL_USER: labuser
+      MYSQL_PASSWORD: 123!@#ARIira18()
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
