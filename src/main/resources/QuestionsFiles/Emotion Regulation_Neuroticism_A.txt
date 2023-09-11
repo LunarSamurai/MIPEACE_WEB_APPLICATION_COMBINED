@@ -1,7 +1,0 @@
-How often are you relaxed during OSUT?|1|+
-How often do you feel blue during OSUT?|1|-
-To what extent do you get stressed out easily during OSUT?|2|-
-To what extent do you worry about things during OSUT?|2|-
-To what extent do you get upset easily during OSUT?|2|-
-To what exent do you get irritated easily during OSUT?|2|-
-EOF
